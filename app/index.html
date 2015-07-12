@@ -16,6 +16,11 @@
   </head>
   <body ng-app="worthItApp">
 
+    <div class="chart">
+      
+    </div>
+
+
     <div class="container">
       <div ng-view=""></div>
     </div>
@@ -27,6 +32,7 @@
     <script src="bower_components/angular-aria/angular-aria.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -34,6 +40,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/services/d3service.js"></script>
         <!-- endbuild -->
 </body>
 </html>

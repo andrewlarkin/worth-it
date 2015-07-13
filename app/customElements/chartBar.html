@@ -1,0 +1,31 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="chart-bar">
+  <template>
+    <g class="chart-bar-children" transform="translate(0,0)">
+        <rect width="20" height="20"></rect>
+        <text x="17" y="10" dy=".35em">2</text>
+    </g>
+    <g class="chart-bar-civilians" transform="translate(20,0)">
+        <rect width="40" height="20"></rect>
+        <text x="37" y="10" dy=".35em">4</text>
+    </g>
+    <g class="chart-bar-enemies" transform="translate(60,0)">
+        <rect width="40" height="20"></rect>
+        <text x="37" y="10" dy=".35em">4</text>
+    </g>
+  </template>
+
+  <script>
+    var ChartBar = Polymer({
+
+      is: 'chart-bar',
+
+      extends: 'g',
+
+
+    });
+
+    console.log(new ChartBar());
+  </script>
+</dom-module>

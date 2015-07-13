@@ -1,10 +1,56 @@
+@import "compass";
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
 
 }
 
 .chart {
-  border: 1px solid #000;
-  width: 800px;
-  height: 600px;
+
+}
+
+.chart-axis {
+  text {
+    font: 10px sans-serif;
+  }
+
+  path,
+  line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  
+}
+
+.chart-bar {
+  cursor: pointer;
+
+  &:hover {
+    [class^="chart-bar-"] rect {
+      opacity: 0.75;
+    }
+  }
+}
+
+[class^="chart-bar-"] rect {
+  @include single-transition(opacity, 0.3s, ease);
+}
+
+.chart-bar-children {
+  rect {
+    fill: rgba(255,0,0,1);
+  }
+}
+
+.chart-bar-civilians {
+  rect {
+    fill: rgba(199,67,67,1);
+  }
+}
+
+.chart-bar-enemies {
+  rect {
+    fill: rgba(122,41,41,1);
+  }
 }
